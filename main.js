@@ -48,7 +48,7 @@ function createWindow() {
 }
 
 function createTray() {
-    const iconPath = path.join(__dirname, 'assets', 'iconTemplate.png');
+    const iconPath = path.join(__dirname, 'assets', 'icon-16.png');
     tray = new Tray(iconPath);
 
     const contextMenu = Menu.buildFromTemplate([
