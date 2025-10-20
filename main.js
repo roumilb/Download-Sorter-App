@@ -63,6 +63,7 @@ function createTray() {
                     sorterProcess.stopWatcher();
                 }
                 app.quit();
+                app.exit();
             }
         }
     ]);
@@ -122,4 +123,8 @@ app.whenReady().then(() => {
     loadConfig();
     createWindow();
     createTray();
+
+    app.on('before-quit', () => {
+        app.exit()
+    });
 });
